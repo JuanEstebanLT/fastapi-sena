@@ -25,9 +25,9 @@
 
 Repositorio académico que reúne el desarrollo progresivo de aplicaciones REST con **FastAPI**, conforme a las guías del curso. Cada guía se implementa en un módulo independiente, con sus propias instrucciones, ejemplos de ejecución y evidencias. Esta estructura facilita la revisión del instructor y permite continuar el proyecto sin alterar las actividades ya entregadas.
 
-La **Guía 1** introduce las solicitudes HTTP de consulta, parámetros y documentación interactiva. La **Guía 2** amplía el proyecto mediante operaciones CRUD, validación de datos con **Pydantic** y separación de rutas mediante **APIRouter**. Las próximas guías se incorporarán a medida que se asignen.
+La **Guía 1** introduce las solicitudes HTTP de consulta, parámetros y documentación interactiva. La **Guía 2** amplía el proyecto mediante operaciones CRUD, validación de datos con **Pydantic** y separación de rutas mediante **APIRouter**. La **Guía 3** protege ese CRUD con OAuth2, hashes bcrypt, JWT y autorización por roles.
 
-> **Alcance:** las aplicaciones son prácticas locales independientes. Los datos CRUD de la Guía 2 se almacenan temporalmente en memoria; no hay persistencia en base de datos ni despliegue público.
+> **Alcance:** las aplicaciones son prácticas locales independientes. Los datos CRUD y los usuarios de las Guías 2 y 3 se almacenan temporalmente en memoria; no hay persistencia en base de datos ni despliegue público.
 
 ## Guías de aprendizaje
 
@@ -35,7 +35,7 @@ La **Guía 1** introduce las solicitudes HTTP de consulta, parámetros y documen
 | :--- | :--- | :--- | :--- | :--- |
 | **01 · Fundamentos** | Endpoints GET, parámetros de ruta y consulta, Swagger UI | [README](guia_01/README.md) · [Laboratorio](guia_01/laboratorio_ev03/main.py) · [Catálogo](guia_01/catalogo_ev04/main.py) | [Informe PDF](evidencias/guia_01/Guia_01_Informe_Final_FastAPI.pdf) | [YouTube](https://youtu.be/39X68AKH1gg) · [MP4](evidencias/guia_01/Guia_01_Sustentacion_FastAPI.mp4) |
 | **02 · CRUD modular** | POST, GET, PUT, DELETE; BaseModel, Pydantic y APIRouter | [README](guia_02/README.md) · [Productos](guia_02/tienda_api/routers/productos.py) · [Categorías](guia_02/tienda_api/routers/categorias.py) | [Informe PDF](evidencias/guia_02/GA2_FastAPI_Informe_Final_APA7_v1.0.pdf) · [Más evidencias](evidencias/guia_02/README.md) | [YouTube](https://youtu.be/8UsyPKH7UBY) · [MP4](evidencias/guia_02/GA2_FastAPI_Sustentacion_v1.0.mp4) |
-| **03 · Próxima guía** | Por definir según el material del instructor | Aún no iniciada | [Espacio de evidencias](evidencias/guia_03/README.md) | No disponible |
+| **03 · Seguridad** | OAuth2, bcrypt, JWT y roles sobre el CRUD modular | [README](guia_03/README.md) · [Aplicación](guia_03/tienda_api/main.py) · [Seguridad](guia_03/tienda_api/seguridad.py) | [Pendientes](evidencias/guia_03/README.md) | Pendiente |
 
 El **informe final de la Guía 2** se entrega en PDF, versión documental **1.0**, con las cuatro evidencias académicas y las capturas de Swagger UI. El informe está publicado en las carpetas de evidencias de la Guía 2 y en el índice central, con enlaces directos a ambas copias.
 
@@ -43,12 +43,12 @@ El **informe final de la Guía 2** se entrega en PDF, versión documental **1.0*
 
 ## Arquitectura y estructura
 
-Cada guía define su propia aplicación FastAPI. Se utilizan paquetes de Python para aislar el contenido de las prácticas y, en la segunda guía, routers para separar los recursos del catálogo.
+Cada guía define su propia aplicación FastAPI. Se utilizan paquetes de Python para aislar el contenido de las prácticas y routers para separar los recursos del catálogo y la autenticación.
 
 ~~~text
 fastapi-sena/
 ├── README.md
-├── requirements.txt                  # FastAPI y Uvicorn
+├── requirements.txt                  # Dependencias de ejecución
 ├── requirements-dev.txt              # Dependencias de pruebas
 ├── .gitignore
 ├── guia_01/
@@ -73,6 +73,15 @@ fastapi-sena/
 │       ├── README.md
 │       ├── GA2_FastAPI_Informe_Final_APA7_v1.0.pdf
 │       └── GA2_FastAPI_Sustentacion_v1.0.mp4
+├── guia_03/
+│   ├── README.md
+│   └── tienda_api/
+│       ├── main.py
+│       ├── seguridad.py
+│       └── routers/
+│           ├── auth.py
+│           ├── productos.py
+│           └── categorias.py
 ├── evidencias/                       # Índice central, sin archivos sueltos
 │   ├── README.md
 │   ├── guia_01/
@@ -87,7 +96,8 @@ fastapi-sena/
 │       └── README.md
 ├── tests/
 │   ├── test_guia_01.py
-│   └── test_guia_02.py
+│   ├── test_guia_02.py
+│   └── test_guia_03.py
 └── .github/workflows/
     └── pruebas-fastapi.yml
 ~~~
@@ -104,8 +114,11 @@ fastapi-sena/
 | [`guia_02/tienda_api/main.py`](guia_02/tienda_api/main.py) | Aplicación principal; registra los routers |
 | [`guia_02/tienda_api/routers/productos.py`](guia_02/tienda_api/routers/productos.py) | CRUD de productos y validación de entrada |
 | [`guia_02/tienda_api/routers/categorias.py`](guia_02/tienda_api/routers/categorias.py) | CRUD de categorías y validación de entrada |
+| [`guia_03/tienda_api/main.py`](guia_03/tienda_api/main.py) | Aplicación protegida de la Guía 3 |
+| [`guia_03/tienda_api/seguridad.py`](guia_03/tienda_api/seguridad.py) | Hashes, JWT y dependencias de autorización |
 | [`tests/test_guia_01.py`](tests/test_guia_01.py) | Pruebas automatizadas de la Guía 1 |
 | [`tests/test_guia_02.py`](tests/test_guia_02.py) | Pruebas automatizadas de la Guía 2 |
+| [`tests/test_guia_03.py`](tests/test_guia_03.py) | Pruebas automatizadas de autenticación y roles de la Guía 3 |
 
 ## Instalación
 
@@ -167,6 +180,14 @@ python -m uvicorn guia_01.catalogo_ev04.main:app --reload
 python -m uvicorn guia_02.tienda_api.main:app --reload
 ~~~
 
+**Guía 3 — API de tienda protegida**
+
+Configure primero `JWT_SECRET_KEY` como explica el [README de la Guía 3](guia_03/README.md) y ejecute:
+
+~~~powershell
+python -m uvicorn guia_03.tienda_api.main:app --reload
+~~~
+
 Con el servidor activo:
 
 - **Swagger UI:** http://127.0.0.1:8000/docs
@@ -182,6 +203,7 @@ La validación técnica utiliza `pytest` y `TestClient`. Para ejecutar las prueb
 ~~~powershell
 python -m pytest tests/test_guia_01.py -q
 python -m pytest tests/test_guia_02.py -q
+python -m pytest tests/test_guia_03.py -q
 python -m pytest tests -q
 ~~~
 
@@ -201,9 +223,9 @@ La carpeta `evidencias/` contiene únicamente el índice y las subcarpetas ident
 - [Evidencias generales — índice](evidencias/README.md)
 - [Evidencias Guía 1 — carpeta central](evidencias/guia_01/README.md) · [carpeta individual](guia_01/evidencias/README.md)
 - [Evidencias Guía 2 — carpeta central](evidencias/guia_02/README.md) · [carpeta individual](guia_02/evidencias/README.md)
-- [Próximas evidencias — Guía 3](evidencias/guia_03/README.md)
+- [Evidencias pendientes — Guía 3](evidencias/guia_03/README.md)
 
-**Estado de entrega:** la Guía 1 conserva informe y video publicados. La Guía 2 cuenta con código, pruebas y documentación; el PDF final está publicado en sus dos carpetas de evidencias. El video grupal está publicado en ambas carpetas de evidencias. La Guía 3 aún no se ha iniciado.
+**Estado de entrega:** la Guía 1 conserva informe y video publicados. La Guía 2 cuenta con código, pruebas y documentación; el PDF final y el video grupal están publicados en sus carpetas de evidencias. La Guía 3 cuenta con implementación técnica y pruebas automatizadas; sus capturas, informe académico y sustentación continúan pendientes.
 
 ## Referencias técnicas
 
