@@ -13,6 +13,7 @@
 **Programa:** Análisis y Desarrollo de Software (ADSO)  
 **Instructor:** Mateo Arroyave
 
+**Responsable del repositorio:** [Juan Esteban Lezcano Tejada](https://github.com/JuanEstebanLT)  
 **Integrantes:** Juan Esteban Lezcano Tejada · Mariana Suárez · Emanuel Villa
 
 [Guías](#guías-de-aprendizaje) · [Arquitectura](#arquitectura-y-estructura) · [Instalación](#instalación) · [Pruebas](#pruebas-automatizadas) · [Evidencias](#organización-de-evidencias)
@@ -35,7 +36,7 @@ La **Guía 1** introduce las solicitudes HTTP de consulta, parámetros y documen
 | :--- | :--- | :--- | :--- | :--- |
 | **01 · Fundamentos** | Endpoints GET, parámetros de ruta y consulta, Swagger UI | [README](guia_01/README.md) · [Laboratorio](guia_01/laboratorio_ev03/main.py) · [Catálogo](guia_01/catalogo_ev04/main.py) | [Informe PDF](evidencias/guia_01/Guia_01_Informe_Final_FastAPI.pdf) | [YouTube](https://youtu.be/39X68AKH1gg) · [MP4](evidencias/guia_01/Guia_01_Sustentacion_FastAPI.mp4) |
 | **02 · CRUD modular** | POST, GET, PUT, DELETE; BaseModel, Pydantic y APIRouter | [README](guia_02/README.md) · [Productos](guia_02/tienda_api/routers/productos.py) · [Categorías](guia_02/tienda_api/routers/categorias.py) | [Informe PDF](evidencias/guia_02/GA2_FastAPI_Informe_Final_APA7_v1.0.pdf) · [Más evidencias](evidencias/guia_02/README.md) | [YouTube](https://youtu.be/8UsyPKH7UBY) · [MP4](evidencias/guia_02/GA2_FastAPI_Sustentacion_v1.0.mp4) |
-| **03 · Seguridad** | OAuth2, bcrypt, JWT y roles sobre el CRUD modular | [README](guia_03/README.md) · [Aplicación](guia_03/tienda_api/main.py) · [Seguridad](guia_03/tienda_api/seguridad.py) | [Pendientes](evidencias/guia_03/README.md) | Pendiente |
+| **03 · Seguridad** | OAuth2, bcrypt, JWT y roles sobre el CRUD modular | [README](guia_03/README.md) · [Aplicación](guia_03/tienda_api/main.py) · [Seguridad](guia_03/tienda_api/seguridad.py) | [Informe PDF v1.0](evidencias/guia_03/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf) · [Índice](evidencias/guia_03/README.md) | Video pendiente |
 
 El **informe final de la Guía 2** se entrega en PDF, versión documental **1.0**, con las cuatro evidencias académicas y las capturas de Swagger UI. El informe está publicado en las carpetas de evidencias de la Guía 2 y en el índice central, con enlaces directos a ambas copias.
 
@@ -75,13 +76,16 @@ fastapi-sena/
 │       └── GA2_FastAPI_Sustentacion_v1.0.mp4
 ├── guia_03/
 │   ├── README.md
-│   └── tienda_api/
-│       ├── main.py
-│       ├── seguridad.py
-│       └── routers/
-│           ├── auth.py
-│           ├── productos.py
-│           └── categorias.py
+│   ├── tienda_api/
+│   │   ├── main.py
+│   │   ├── seguridad.py
+│   │   └── routers/
+│   │       ├── auth.py
+│   │       ├── productos.py
+│   │       └── categorias.py
+│   └── evidencias/
+│       ├── README.md
+│       └── GA3_FastAPI_Informe_Final_APA7_v1.0.pdf
 ├── evidencias/                       # Índice central, sin archivos sueltos
 │   ├── README.md
 │   ├── guia_01/
@@ -93,7 +97,8 @@ fastapi-sena/
 │   │   ├── GA2_FastAPI_Informe_Final_APA7_v1.0.pdf
 │   │   └── GA2_FastAPI_Sustentacion_v1.0.mp4
 │   └── guia_03/
-│       └── README.md
+│       ├── README.md
+│       └── GA3_FastAPI_Informe_Final_APA7_v1.0.pdf
 ├── tests/
 │   ├── test_guia_01.py
 │   ├── test_guia_02.py
@@ -207,7 +212,7 @@ python -m pytest tests/test_guia_03.py -q
 python -m pytest tests -q
 ~~~
 
-La ejecución también está configurada en [GitHub Actions](.github/workflows/pruebas-fastapi.yml) para comprobar los cambios enviados a `main`. Las pruebas cubren rutas, respuestas HTTP, CRUD y validación de solicitudes.
+La ejecución también está configurada en [GitHub Actions](.github/workflows/pruebas-fastapi.yml) para comprobar los cambios enviados a `main`. Las pruebas cubren rutas, CRUD, validación, autenticación y permisos por roles. En la [ejecución del commit `7162ea3`](https://github.com/JuanEstebanLT/fastapi-sena/actions/runs/43995509713) se registraron **23 pruebas aprobadas, cero fallidas y una advertencia no bloqueante**.
 
 > Las pruebas automatizadas **complementan**, pero no reemplazan, las capturas reales de Swagger UI requeridas como evidencia práctica.
 
@@ -223,9 +228,9 @@ La carpeta `evidencias/` contiene únicamente el índice y las subcarpetas ident
 - [Evidencias generales — índice](evidencias/README.md)
 - [Evidencias Guía 1 — carpeta central](evidencias/guia_01/README.md) · [carpeta individual](guia_01/evidencias/README.md)
 - [Evidencias Guía 2 — carpeta central](evidencias/guia_02/README.md) · [carpeta individual](guia_02/evidencias/README.md)
-- [Evidencias pendientes — Guía 3](evidencias/guia_03/README.md)
+- [Evidencias Guía 3 — carpeta central](evidencias/guia_03/README.md) · [carpeta individual](guia_03/evidencias/README.md)
 
-**Estado de entrega:** la Guía 1 conserva informe y video publicados. La Guía 2 cuenta con código, pruebas y documentación; el PDF final y el video grupal están publicados en sus carpetas de evidencias. La Guía 3 cuenta con implementación técnica y pruebas automatizadas; sus capturas, informe académico y sustentación continúan pendientes.
+**Estado de entrega:** la Guía 1 conserva informe y video publicados. La Guía 2 cuenta con código, pruebas y documentación; el PDF final y el video grupal están publicados en sus carpetas de evidencias. La Guía 3 cuenta con código, pruebas automatizadas y el informe final PDF con capturas reales de Swagger UI publicados; únicamente falta el video de sustentación.
 
 ## Referencias técnicas
 
@@ -240,6 +245,6 @@ La carpeta `evidencias/` contiene únicamente el índice y las subcarpetas ident
 <div align="center">
 
 **Proyecto académico · SENA · ADSO**  
-**Responsable del repositorio:** [JuanEstebanLT](https://github.com/JuanEstebanLT)
+**Responsable del repositorio:** [Juan Esteban Lezcano Tejada (JuanEstebanLT)](https://github.com/JuanEstebanLT)
 
 </div>

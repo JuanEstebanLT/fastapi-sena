@@ -1,7 +1,18 @@
-# Guía 3 — Espacio para evidencias pendientes
+# Guía 3 — Evidencias académicas
 
-La implementación técnica de la **Guía 3** se encuentra en `guia_03/`. Esta carpeta está reservada para centralizar posteriormente las capturas reales, el informe académico y el video de sustentación.
+**Responsable del repositorio:** [Juan Esteban Lezcano Tejada](https://github.com/JuanEstebanLT)  
+**Equipo:** Juan Esteban Lezcano Tejada · Mariana Suárez · Emanuel Villa  
+**Programa:** Análisis y Desarrollo de Software (ADSO), SENA  
+**Instructor:** Mateo Arroyave
 
-No hay informes, capturas ni videos de la Guía 3 publicados en este momento. Este archivo no constituye una evidencia de ejecución ni una declaración de entrega académica.
+## Informe final
+
+- [**GA3_FastAPI_Informe_Final_APA7_v1.0.pdf**](GA3_FastAPI_Informe_Final_APA7_v1.0.pdf) — informe de las cuatro evidencias, con figuras, capturas de Swagger UI, pruebas y referencias.
+- [Copia del PDF dentro de la Guía 3](../../guia_03/evidencias/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf).
+- [Documentación técnica de la Guía 3](../../guia_03/README.md).
+
+## Sustentación
+
+**Pendiente de grabación y publicación del video.** El código, las pruebas y el informe académico ya están publicados.
 
 [Volver al índice general de evidencias](../README.md).

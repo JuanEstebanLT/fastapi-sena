@@ -1,12 +1,17 @@
 # Guía 3 — Autenticación, autorización y seguridad
 
+**Responsable del repositorio:** [Juan Esteban Lezcano Tejada](https://github.com/JuanEstebanLT)  
+**Equipo:** Juan Esteban Lezcano Tejada · Mariana Suárez · Emanuel Villa  
+**Programa:** Análisis y Desarrollo de Software (ADSO), SENA  
+**Instructor:** Mateo Arroyave
+
 Esta guía continúa la API de comercio electrónico de la Guía 2 en una aplicación independiente. Incorpora autenticación OAuth2 con contraseña, tokens JWT firmados, hashes bcrypt y autorización basada en los roles `cliente` y `admin`. Las Guías 1 y 2 no se modifican.
 
 ## Objetivos técnicos
 
 - Autenticar usuarios mediante `OAuth2PasswordRequestForm`.
 - Firmar tokens JWT con HS256 y una vigencia de 30 minutos.
-- almacenar solamente hashes bcrypt de las contraseñas.
+- Almacenar solamente hashes bcrypt de las contraseñas.
 - Proteger las escrituras del catálogo y limitar los borrados al rol administrador.
 - Mantener productos, categorías y usuarios temporalmente en memoria.
 - Verificar el comportamiento mediante pytest y `TestClient`.
@@ -116,7 +121,7 @@ Estas cuentas sirven exclusivamente para prácticas locales. En la estructura en
 5. Pruebe POST y PUT con cualquiera de las dos cuentas.
 6. Intente un DELETE con `ana` para observar el 403.
 7. Cierre la autorización, vuelva a autorizar como `admin` y repita el DELETE para obtener 200.
-8. Use `/auth/registro` sin enviar `rol`, inicie sesión con la cuenta creada y confirme que `/auth/yo` muestra `cliente`.
+8. Use `/auth/registro` con los campos `usuario` y `password`, sin enviar `rol`; inicie sesión con la cuenta creada y confirme que `/auth/yo` muestra `cliente`.
 
 ## Pruebas automatizadas
 
@@ -127,11 +132,19 @@ python -m pytest tests/test_guia_03.py -q
 python -m pytest tests -q
 ```
 
-La segunda orden valida conjuntamente las Guías 1, 2 y 3.
+La segunda orden valida conjuntamente las Guías 1, 2 y 3. La [ejecución de GitHub Actions del commit `7162ea3`](https://github.com/JuanEstebanLT/fastapi-sena/actions/runs/43995509713) registró **23 pruebas aprobadas, ninguna fallida y una advertencia de deprecación no bloqueante**.
 
 ## Limitaciones y estado
 
 - Todos los datos están en memoria y se pierden al reiniciar el proceso.
 - No hay base de datos, revocación de tokens, recuperación de contraseña ni despliegue productivo.
-- La implementación técnica y sus pruebas automatizadas forman solo una fase de la actividad.
-- Las capturas manuales, el informe académico, las evidencias publicadas y la sustentación continúan pendientes y deben elaborarse a partir de ejecuciones reales.
+- La implementación técnica, las pruebas y el informe académico están publicados. Las capturas reales de Swagger UI están incorporadas en el PDF de la Guía 3.
+- **Pendiente:** grabación y publicación del video de sustentación.
+
+## Informe académico y evidencias
+
+- [Informe definitivo PDF — versión 1.0](evidencias/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf)
+- [Evidencias de la Guía 3](evidencias/README.md)
+- [Copia del informe en el índice central](../evidencias/guia_03/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf)
+
+El informe desarrolla las cuatro evidencias GA3 e incluye resultados de pruebas, las figuras y las referencias académicas. La sustentación audiovisual está pendiente.
