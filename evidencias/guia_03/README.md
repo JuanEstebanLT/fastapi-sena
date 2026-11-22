@@ -13,6 +13,8 @@
 
 ## Sustentación
 
-**Pendiente de grabación y publicación del video.** El código, las pruebas y el informe académico ya están publicados.
+El video de sustentación está **publicado**: [**GA3_FastAPI_Sustentacion_v1.0.mp4**](GA3_FastAPI_Sustentacion_v1.0.mp4).
+
+Existe una [copia del video en las evidencias de la guía](../../guia_03/evidencias/GA3_FastAPI_Sustentacion_v1.0.mp4). El enlace de YouTube queda pendiente de incorporación.
 
 [Volver al índice general de evidencias](../README.md).

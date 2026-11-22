@@ -9,6 +9,8 @@
 
 ## Sustentación
 
-El video de la Guía 3 está **pendiente de grabación y publicación**.
+El video de sustentación está **publicado** en esta carpeta: [**GA3_FastAPI_Sustentacion_v1.0.mp4**](GA3_FastAPI_Sustentacion_v1.0.mp4).
+
+También está disponible la [copia en el índice general de evidencias](../../evidencias/guia_03/GA3_FastAPI_Sustentacion_v1.0.mp4). El enlace de YouTube todavía no está incorporado.
 
 [Volver a la Guía 3](../README.md) · [Índice general de evidencias](../../evidencias/README.md).

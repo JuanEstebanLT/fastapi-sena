@@ -22,15 +22,19 @@ Esta guía continúa la API de comercio electrónico de la Guía 2 en una aplica
 guia_03/
 ├── __init__.py
 ├── README.md
-└── tienda_api/
-    ├── __init__.py
-    ├── main.py
-    ├── seguridad.py
-    └── routers/
-        ├── __init__.py
-        ├── auth.py
-        ├── productos.py
-        └── categorias.py
+├── tienda_api/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── seguridad.py
+│   └── routers/
+│       ├── __init__.py
+│       ├── auth.py
+│       ├── productos.py
+│       └── categorias.py
+└── evidencias/
+    ├── README.md
+    ├── GA3_FastAPI_Informe_Final_APA7_v1.0.pdf
+    └── GA3_FastAPI_Sustentacion_v1.0.mp4
 ```
 
 `main.py` crea la aplicación y registra los tres routers. `seguridad.py` concentra bcrypt, JWT, el esquema OAuth2, los usuarios en memoria y las dependencias de autorización. Cada recurso conserva su propio `APIRouter`.
@@ -139,12 +143,14 @@ La segunda orden valida conjuntamente las Guías 1, 2 y 3. La [ejecución de Git
 - Todos los datos están en memoria y se pierden al reiniciar el proceso.
 - No hay base de datos, revocación de tokens, recuperación de contraseña ni despliegue productivo.
 - La implementación técnica, las pruebas y el informe académico están publicados. Las capturas reales de Swagger UI están incorporadas en el PDF de la Guía 3.
-- **Pendiente:** grabación y publicación del video de sustentación.
+- El video de sustentación ya está grabado y publicado en formato MP4 en las carpetas de evidencias. La publicación del enlace de YouTube es opcional y está pendiente de incorporación.
 
 ## Informe académico y evidencias
 
 - [Informe definitivo PDF — versión 1.0](evidencias/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf)
 - [Evidencias de la Guía 3](evidencias/README.md)
 - [Copia del informe en el índice central](../evidencias/guia_03/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf)
+- [Video de sustentación MP4 — versión 1.0](evidencias/GA3_FastAPI_Sustentacion_v1.0.mp4)
+- [Copia del video en el índice central](../evidencias/guia_03/GA3_FastAPI_Sustentacion_v1.0.mp4)
 
-El informe desarrolla las cuatro evidencias GA3 e incluye resultados de pruebas, las figuras y las referencias académicas. La sustentación audiovisual está pendiente.
+El informe desarrolla las cuatro evidencias GA3 e incluye resultados de pruebas, figuras y referencias académicas. La sustentación audiovisual está publicada en MP4; el enlace de YouTube podrá añadirse cuando esté disponible.

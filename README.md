@@ -36,9 +36,9 @@ La **Guía 1** introduce las solicitudes HTTP de consulta, parámetros y documen
 | :--- | :--- | :--- | :--- | :--- |
 | **01 · Fundamentos** | Endpoints GET, parámetros de ruta y consulta, Swagger UI | [README](guia_01/README.md) · [Laboratorio](guia_01/laboratorio_ev03/main.py) · [Catálogo](guia_01/catalogo_ev04/main.py) | [Informe PDF](evidencias/guia_01/Guia_01_Informe_Final_FastAPI.pdf) | [YouTube](https://youtu.be/39X68AKH1gg) · [MP4](evidencias/guia_01/Guia_01_Sustentacion_FastAPI.mp4) |
 | **02 · CRUD modular** | POST, GET, PUT, DELETE; BaseModel, Pydantic y APIRouter | [README](guia_02/README.md) · [Productos](guia_02/tienda_api/routers/productos.py) · [Categorías](guia_02/tienda_api/routers/categorias.py) | [Informe PDF](evidencias/guia_02/GA2_FastAPI_Informe_Final_APA7_v1.0.pdf) · [Más evidencias](evidencias/guia_02/README.md) | [YouTube](https://youtu.be/8UsyPKH7UBY) · [MP4](evidencias/guia_02/GA2_FastAPI_Sustentacion_v1.0.mp4) |
-| **03 · Seguridad** | OAuth2, bcrypt, JWT y roles sobre el CRUD modular | [README](guia_03/README.md) · [Aplicación](guia_03/tienda_api/main.py) · [Seguridad](guia_03/tienda_api/seguridad.py) | [Informe PDF v1.0](evidencias/guia_03/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf) · [Índice](evidencias/guia_03/README.md) | Video pendiente |
+| **03 · Seguridad** | OAuth2, bcrypt, JWT y roles sobre el CRUD modular | [README](guia_03/README.md) · [Aplicación](guia_03/tienda_api/main.py) · [Seguridad](guia_03/tienda_api/seguridad.py) | [Informe PDF v1.0](evidencias/guia_03/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf) · [Índice](evidencias/guia_03/README.md) | [MP4](evidencias/guia_03/GA3_FastAPI_Sustentacion_v1.0.mp4) · YouTube pendiente |
 
-El **informe final de la Guía 2** se entrega en PDF, versión documental **1.0**, con las cuatro evidencias académicas y las capturas de Swagger UI. El informe está publicado en las carpetas de evidencias de la Guía 2 y en el índice central, con enlaces directos a ambas copias.
+Los **informes finales de las Guías 2 y 3** se encuentran publicados en PDF, versión documental **1.0**, con las evidencias académicas y capturas de Swagger UI. Cada informe y su video de sustentación están disponibles tanto en la carpeta de su guía como en el índice central, con enlaces directos a las dos copias.
 
 **[Consultar el índice central de evidencias](evidencias/README.md)**
 
@@ -85,7 +85,8 @@ fastapi-sena/
 │   │       └── categorias.py
 │   └── evidencias/
 │       ├── README.md
-│       └── GA3_FastAPI_Informe_Final_APA7_v1.0.pdf
+│       ├── GA3_FastAPI_Informe_Final_APA7_v1.0.pdf
+│       └── GA3_FastAPI_Sustentacion_v1.0.mp4
 ├── evidencias/                       # Índice central, sin archivos sueltos
 │   ├── README.md
 │   ├── guia_01/
@@ -98,7 +99,8 @@ fastapi-sena/
 │   │   └── GA2_FastAPI_Sustentacion_v1.0.mp4
 │   └── guia_03/
 │       ├── README.md
-│       └── GA3_FastAPI_Informe_Final_APA7_v1.0.pdf
+│       ├── GA3_FastAPI_Informe_Final_APA7_v1.0.pdf
+│       └── GA3_FastAPI_Sustentacion_v1.0.mp4
 ├── tests/
 │   ├── test_guia_01.py
 │   ├── test_guia_02.py
@@ -230,7 +232,7 @@ La carpeta `evidencias/` contiene únicamente el índice y las subcarpetas ident
 - [Evidencias Guía 2 — carpeta central](evidencias/guia_02/README.md) · [carpeta individual](guia_02/evidencias/README.md)
 - [Evidencias Guía 3 — carpeta central](evidencias/guia_03/README.md) · [carpeta individual](guia_03/evidencias/README.md)
 
-**Estado de entrega:** la Guía 1 conserva informe y video publicados. La Guía 2 cuenta con código, pruebas y documentación; el PDF final y el video grupal están publicados en sus carpetas de evidencias. La Guía 3 cuenta con código, pruebas automatizadas y el informe final PDF con capturas reales de Swagger UI publicados; únicamente falta el video de sustentación.
+**Estado de entrega:** la Guía 1 conserva informe y video publicados. La Guía 2 cuenta con código, pruebas y documentación; el PDF final y el video grupal están publicados en sus carpetas de evidencias. La Guía 3 cuenta con código, pruebas automatizadas, informe final PDF con capturas reales de Swagger UI y video de sustentación MP4 publicados en las dos carpetas de evidencias. El enlace a YouTube de la Guía 3 aún no se ha incorporado.
 
 ## Referencias técnicas
 
