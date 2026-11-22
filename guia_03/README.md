@@ -143,14 +143,15 @@ La segunda orden valida conjuntamente las Guías 1, 2 y 3. La [ejecución de Git
 - Todos los datos están en memoria y se pierden al reiniciar el proceso.
 - No hay base de datos, revocación de tokens, recuperación de contraseña ni despliegue productivo.
 - La implementación técnica, las pruebas y el informe académico están publicados. Las capturas reales de Swagger UI están incorporadas en el PDF de la Guía 3.
-- El video de sustentación ya está grabado y publicado en formato MP4 en las carpetas de evidencias. La publicación del enlace de YouTube es opcional y está pendiente de incorporación.
+- El video de sustentación ya está grabado y publicado en formato MP4 en las carpetas de evidencias. La sustentación también está publicada en YouTube.
 
 ## Informe académico y evidencias
 
 - [Informe definitivo PDF — versión 1.0](evidencias/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf)
 - [Evidencias de la Guía 3](evidencias/README.md)
 - [Copia del informe en el índice central](../evidencias/guia_03/GA3_FastAPI_Informe_Final_APA7_v1.0.pdf)
+- [Video de sustentación en YouTube](https://youtu.be/20fL3UtHwVo)
 - [Video de sustentación MP4 — versión 1.0](evidencias/GA3_FastAPI_Sustentacion_v1.0.mp4)
 - [Copia del video en el índice central](../evidencias/guia_03/GA3_FastAPI_Sustentacion_v1.0.mp4)
 
-El informe desarrolla las cuatro evidencias GA3 e incluye resultados de pruebas, figuras y referencias académicas. La sustentación audiovisual está publicada en MP4; el enlace de YouTube podrá añadirse cuando esté disponible.
+El informe desarrolla las cuatro evidencias GA3 e incluye resultados de pruebas, figuras y referencias académicas. La sustentación audiovisual está publicada tanto en MP4 como en YouTube.

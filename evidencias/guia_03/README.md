@@ -13,8 +13,8 @@
 
 ## Sustentación
 
-El video de sustentación está **publicado**: [**GA3_FastAPI_Sustentacion_v1.0.mp4**](GA3_FastAPI_Sustentacion_v1.0.mp4).
+El video de sustentación está **publicado**: [YouTube](https://youtu.be/20fL3UtHwVo) · [**GA3_FastAPI_Sustentacion_v1.0.mp4**](GA3_FastAPI_Sustentacion_v1.0.mp4).
 
-Existe una [copia del video en las evidencias de la guía](../../guia_03/evidencias/GA3_FastAPI_Sustentacion_v1.0.mp4). El enlace de YouTube queda pendiente de incorporación.
+Existe una [copia del video en las evidencias de la guía](../../guia_03/evidencias/GA3_FastAPI_Sustentacion_v1.0.mp4). La versión en YouTube y ambas copias MP4 están disponibles.
 
 [Volver al índice general de evidencias](../README.md).
